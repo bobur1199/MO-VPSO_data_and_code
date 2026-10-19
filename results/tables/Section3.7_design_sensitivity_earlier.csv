@@ -1,0 +1,11 @@
+config,feasibility_pct
+cp4,98.0
+cp6,76.0
+cp8,48.0
+cp10,56.0
+cp12,40.0
+count50,40.0
+count200,46.0
+count2000,48.0
+depth500,78.0
+depth2000,76.0

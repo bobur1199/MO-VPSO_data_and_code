@@ -1,0 +1,214 @@
+
+=== Table 2: mean IGD on ZDT problems (10 runs) ===
+optimizer  NSGA-II   MOPSO   SMPSO
+problem                           
+ZDT1        0.0049  0.1424  0.0091
+ZDT2        0.0050  0.0511  0.0070
+ZDT3        0.0054  0.1775  0.0100
+
+=== Table 3: mean hypervolume ===
+optimizer  MO-PSO  MO-IPSO  MO-APSO  MO-RandWPSO  MO-VPSO
+env                                                      
+H6          12.92    11.06    15.73        11.86    17.84
+H7           2.60     2.29     2.73         2.42     2.72
+H8           7.19     7.21     6.89         7.50     9.20
+H9           5.69     6.36     6.52         4.12     8.23
+H10          0.25     0.00     1.10         0.18     0.43
+O1           2.78     2.71     3.83         2.48     4.41
+O2           6.67     6.94     9.64         6.74     9.14
+O3           3.55     3.82     4.66         2.93     5.17
+O4           5.46     5.15     7.81         5.63     8.06
+O5          12.60    10.75    12.59        11.68    12.24
+Friedman over environments (N=10): chi2=22.48, p=1.6e-04, Kendall W=0.56
+Mean ranks: MO-PSO 3.4, MO-IPSO 4.1, MO-APSO 2.0, MO-RandWPSO 4.0, MO-VPSO 1.5
+Friedman over runs (N=300): chi2=311.62, p=3.4e-66, W=0.26; mean rank MO-VPSO 1.97
+
+=== Table 4: Wilcoxon signed-rank, MO-VPSO vs each (Holm over 4) ===
+    comparison      subset  n_pairs   p_raw  p_holm     r
+     vs MO-PSO All 10 env.      300 6.0e-16 1.2e-15 0.584
+    vs MO-IPSO All 10 env.      300 1.5e-19 4.4e-19 0.644
+    vs MO-APSO All 10 env.      300 8.8e-08 8.8e-08 0.383
+vs MO-RandWPSO All 10 env.      300 3.4e-21 1.4e-20 0.684
+     vs MO-PSO    Hard set      150 1.0e-05 2.1e-05 0.482
+    vs MO-IPSO    Hard set      150 4.0e-07 1.2e-06 0.542
+    vs MO-APSO    Hard set      150   0.002   0.002 0.334
+vs MO-RandWPSO    Hard set      150 1.6e-08 6.3e-08 0.624
+
+=== Table 5: success rate (%) ===
+optimizer  MO-PSO  MO-IPSO  MO-APSO  MO-RandWPSO  MO-VPSO
+env                                                      
+H6           90.0    100.0    100.0         87.0    100.0
+H7           77.0     73.0     80.0         77.0     80.0
+H8           60.0     73.0     60.0         63.0     67.0
+H9           57.0     80.0     63.0         43.0     77.0
+H10          10.0      0.0     20.0          3.0     10.0
+O1           67.0     90.0     83.0         63.0     93.0
+O2           73.0     97.0     97.0         77.0     87.0
+O3           70.0     80.0     87.0         60.0     93.0
+O4           70.0     77.0     93.0         77.0     93.0
+O5          100.0    100.0    100.0        100.0    100.0
+Pooled success rate: MO-PSO 67.3%, MO-IPSO 77.0%, MO-APSO 78.3%, MO-RandWPSO 65.0%, MO-VPSO 80.0%
+  MO-VPSO vs MO-PSO: discordant 53 vs 15, exact binomial p=4.1e-06, p_Holm=1.2e-05
+  MO-VPSO vs MO-IPSO: discordant 32 vs 23, exact binomial p=0.28, p_Holm=0.56
+  MO-VPSO vs MO-APSO: discordant 25 vs 20, exact binomial p=0.55, p_Holm=0.56
+  MO-VPSO vs MO-RandWPSO: discordant 59 vs 14, exact binomial p=1.0e-07, p_Holm=4.1e-07
+
+=== Table 6: mean number of non-dominated collision-free paths (feasible runs) ===
+optimizer  MO-PSO  MO-IPSO  MO-APSO  MO-RandWPSO  MO-VPSO
+env                                                      
+H6            5.2      4.3      6.2          3.8      7.9
+H7            6.0      5.0      6.8          6.0     12.9
+H8            4.2      3.0      5.3          3.7      6.4
+H9            3.6      3.9      5.6          4.4      7.7
+H10           6.0      NaN      3.2          4.0      2.0
+O1            3.3      2.8      4.0          2.9      5.2
+O2            4.1      3.7      4.7          4.3      7.6
+O3            4.4      3.8      4.9          4.1      6.6
+O4            4.1      4.4      5.4          4.3      9.5
+O5            4.7      3.8      5.6          4.5      8.6
+
+=== Table 7: mean shortest collision-free path length (feasible runs) ===
+optimizer  MO-PSO  MO-IPSO  MO-APSO  MO-RandWPSO  MO-VPSO
+env                                                      
+H6         124.80   137.49   122.59       130.04   117.03
+H7         106.98   109.77   106.74       109.19   106.74
+H8         162.50   175.11   167.95       160.83   155.22
+H9         170.50   188.41   168.73       175.34   164.91
+H10        141.25      NaN   125.72       125.51   136.72
+O1         118.70   133.48   114.63       121.52   113.67
+O2         134.55   150.40   129.05       136.01   126.19
+O3         165.94   168.28   162.88       166.79   161.50
+O4         110.36   121.29   105.98       116.20   104.11
+O5         138.63   147.91   138.52       143.79   140.74
+
+=== Section 3.5: restart ablation (scored against the Table 3 reference points) ===
+Mean HV: without restart 7.83, with restart 7.74; Wilcoxon p=0.28, r=-0.08
+Success rate: without 81.0%, with 80.0%; discordant 10 vs 7, p=0.63
+Mean front size (feasible runs): without 7.9, with 8.0
+
+=== Table 8: comparison with established optimizers ===
+               HV                        SR (%)                           |P|                       L_min                      
+optimizer MO-VPSO NSGA-II  MOPSO  SMPSO MO-VPSO NSGA-II  MOPSO  SMPSO MO-VPSO NSGA-II MOPSO SMPSO MO-VPSO NSGA-II  MOPSO  SMPSO
+env                                                                                                                            
+H6          16.06   11.10  12.63  14.30  100.00   93.00   93.0   90.0     7.9    15.0  28.8   9.7   117.0   139.4  126.0  119.7
+H7          11.35   14.28  10.60  10.60   80.00  100.00   77.0   77.0    12.9    34.7  32.7  11.8   106.7   106.6  108.9  110.7
+H8          11.49   10.67   5.69   7.00   67.00   70.00   43.0   47.0     6.4    16.1  27.2   6.4   155.2   168.3  167.0  162.8
+H9           1.87    1.55   0.85   1.00   77.00   63.00   33.0   40.0     7.7    20.8  30.8   8.6   164.9   164.7  163.2  163.8
+H10          0.68    0.58   0.20   0.59   10.00   13.00    3.0   10.0     2.0     9.5   4.0   5.0   136.7   147.7  136.3  152.2
+O1           0.33    0.22   0.19   0.16   93.00   77.00   60.0   43.0     5.2     5.3   7.3   5.0   113.7   116.2  115.2  113.2
+O2           3.91    3.80   2.26   2.35   87.00   90.00   57.0   53.0     7.6    10.4  39.2   7.6   126.2   128.1  132.6  126.4
+O3          11.43    9.39   8.07   6.52   93.00   83.00   70.0   53.0     6.6    18.6  28.3   8.9   161.5   168.4  166.3  161.4
+O4          10.51   10.38   7.81   7.32   93.00   93.00   70.0   70.0     9.5    16.8  25.3   8.5   104.1   105.0  104.9  113.5
+O5          12.24   11.31   9.85  10.98  100.00  100.00  100.0  100.0     8.6    25.6  36.6  11.6   140.7   146.7  154.5  146.4
+Mean rank    1.10    2.20   3.50   3.20    1.65    1.65    3.3    3.4     3.5     1.8   1.3   3.4     1.7     3.2    2.7    2.4
+Wins         9.00    1.00   0.00   0.00    5.00    5.00    0.0    0.0     0.0     2.0   8.0   0.0     5.0     1.0    2.0    2.0
+HV Friedman over environments: chi2=21.24, p=9.4e-05, W=0.71; mean ranks MO-VPSO 1.1, NSGA-II 2.2, MOPSO 3.5, SMPSO 3.2
+HV Friedman over runs (N=300): chi2=86.48, p=1.2e-18, W=0.10
+  HV MO-VPSO vs NSGA-II: van Elteren p_Holm=1.3e-06; paired Wilcoxon p_Holm=3.7e-05
+  HV MO-VPSO vs MOPSO: van Elteren p_Holm=5.2e-14; paired Wilcoxon p_Holm=3.6e-17
+  HV MO-VPSO vs SMPSO: van Elteren p_Holm=4.0e-09; paired Wilcoxon p_Holm=6.7e-11
+Pooled success rate: MO-VPSO 80.0%, NSGA-II 78.3%, MOPSO 60.7%, SMPSO 58.3%
+
+IGD+ (runs with a feasible path): MO-VPSO 0.102, NSGA-II 0.174, MOPSO 0.180, SMPSO 0.139
+MO-VPSO lowest per-environment mean in 7 of 10 environments; Friedman over environments p=0.028
+optimizer  MO-VPSO  NSGA-II  MOPSO  SMPSO
+env                                      
+H6           0.217    0.420  0.323  0.224
+H7           0.047    0.043  0.061  0.076
+H8           0.240    0.325  0.427  0.309
+H9           0.109    0.105  0.064  0.083
+H10          0.224    0.466  0.275  0.389
+O1           0.090    0.227  0.152  0.054
+O2           0.071    0.126  0.170  0.091
+O3           0.046    0.126  0.089  0.047
+O4           0.017    0.023  0.018  0.091
+O5           0.094    0.160  0.266  0.174
+  IGD+ MO-VPSO vs NSGA-II: van Elteren p_Holm=5.8e-09
+  IGD+ MO-VPSO vs MOPSO: van Elteren p_Holm=1.7e-04
+  IGD+ MO-VPSO vs SMPSO: van Elteren p_Holm=0.081
+
+=== Table 9: single-objective success rate (%) ===
+optimizer    PSO  IPSO   APSO  RandWPSO   VPSO
+env                                           
+H6          97.0  90.0   97.0     100.0  100.0
+H7          90.0  87.0  100.0      97.0   93.0
+H8          17.0   3.0   53.0      17.0   63.0
+H9          43.0  43.0   70.0      50.0   93.0
+H10          3.0   3.0    7.0       3.0    7.0
+O1          67.0  50.0   93.0      57.0   97.0
+O2          73.0  83.0   93.0      80.0   97.0
+O3          77.0  57.0   93.0      67.0   97.0
+O4          97.0  97.0  100.0      93.0  100.0
+O5         100.0  97.0  100.0     100.0  100.0
+Pooled: PSO 66.3%, IPSO 61.0%, APSO 80.7%, RandWPSO 66.3%, VPSO 84.7%
+  VPSO vs PSO: discordant 60 vs 5, p_Holm=1.5e-12
+  VPSO vs IPSO: discordant 74 vs 3, p_Holm=4.0e-18
+  VPSO vs APSO: discordant 23 vs 11, p_Holm=0.058
+  VPSO vs RandWPSO: discordant 61 vs 6, p_Holm=3.0e-12
+
+=== Section 3.4: MO-VPSO vs SO-VPSO, exploratory (seeds 1-20) ===
+Paired feasible runs: 46; mean HV MO-VPSO 4.57, SO-VPSO 3.41
+  H7: n=17, Wilcoxon p_Holm=0.0025, r=+0.86
+  H8: n=3, Wilcoxon p_Holm=0.25, r=+1.00
+  O2: n=8, Wilcoxon p_Holm=0.016, r=+1.00
+  O4: n=18, Wilcoxon p_Holm=5.8e-04, r=+0.92
+  pooled: n=46, Wilcoxon p_Holm=1.6e-08, r=+0.89
+  Feasibility: MO-VPSO 72.5%, SO-VPSO 66.2%
+  Feasibility exact binomial p_Holm: H7 1, H8 1, O2 1, O4 1, pooled 1
+
+=== Section 3.4: MO-VPSO vs SO-VPSO, confirmatory (seeds 41-90) ===
+Paired feasible runs: 104; mean HV MO-VPSO 5.98, SO-VPSO 5.02
+  H7: n=36, Wilcoxon p_Holm=1.1e-04, r=+0.74
+  H8: n=10, Wilcoxon p_Holm=0.23, r=+0.45
+  O2: n=17, Wilcoxon p_Holm=0.0052, r=+0.79
+  O4: n=41, Wilcoxon p_Holm=1.2e-08, r=+0.92
+  pooled: n=104, Wilcoxon p_Holm=1.6e-10, r=+0.75
+  Feasibility: MO-VPSO 66.5%, SO-VPSO 69.0%
+  Feasibility exact binomial p_Holm: H7 0.46, H8 1, O2 1, O4 1, pooled 1
+
+=== Section 3.5: transfer exponent, exploratory (H6, H8, H9; seeds 1-30) ===
+APSO 73.3%, VPSO-e1.0 78.9%, VPSO-e1.0-wide 73.3%, VPSO-e1.75 85.6%, VPSO-e1/1.75 61.1%
+Back-loaded minus front-loaded: +24.4 points
+
+=== Section 3.5: transfer exponent, confirmatory (280 paired blocks) ===
+gamma=1.75 86.1%, gamma=1/1.75 75.0%, APSO 82.5%
+Difference +11.1 points; discordant 41 vs 10, exact binomial p=1.5e-05
+Against APSO +3.6 points; discordant 24 vs 14, p=0.14
+variant   APSO  VPSO-e1.75  VPSO-e1/1.75
+env                                     
+H6       100.0        97.5          96.2
+H7        97.5       100.0          97.5
+H8        50.0        66.7          36.7
+H9        71.7        71.7          55.0
+Seeds per environment: H6 101-180, H7 101-180, H8 101-160, H9 101-160
+
+=== Table 10: velocity clamp sweep ===
+      saturation_all saturation_1_25 friedman_p kendall_W  n_blocks
+kappa                                                              
+0.05           0.287           0.479    3.2e-04     0.044       120
+0.15           0.092           0.195    5.0e-06     0.062       120
+0.50           0.016           0.033    7.0e-17     0.171       120
+1.00           0.002           0.004    1.3e-29     0.295       120
+Kendall W ratio (k=1.0 / k=0.05): 6.7
+
+=== Section 3.7: design sensitivity, earlier formulation (O1-O5, seeds 1-10) ===
+cp4 98%, cp6 76%, cp8 48%, cp10 56%, cp12 40%, count50 40%, count200 46%, count2000 48%, depth500 78%, depth2000 76%
+
+=== Section 3.7: design sensitivity, final schedule (O1-O5, seeds 1-10) ===
+cp4 100%, cp6 84%, cp8 90%, cp10 70%, cp12 70%, depth500 100%, depth2000 100%, count500 90%, count2000 92%
+
+=== Table 12: benchmark functions, mean (SD) over 30 runs ===
+optimizer                    PSO                 IPSO                 APSO             RandWPSO             VPSO
+function                                                                                                        
+Griewank           0.487 (0.158)        1.06 (0.0385)      0.0679 (0.0367)        0.746 (0.223)  0.0194 (0.0132)
+Bohachevsky  6.98e-11 (1.09e-10)  1.23e-11 (1.47e-11)  2.06e-15 (2.64e-15)  7.88e-10 (2.78e-09)            0 (0)
+Bukin            0.0634 (0.0398)      0.0562 (0.0371)      0.0284 (0.0231)       0.0702 (0.041)  0.0256 (0.0162)
+Ackley             0.465 (0.481)         1.54 (0.427)        0.197 (0.329)        0.614 (0.446)     0.69 (0.708)
+Rastrigin            24.7 (9.05)          31.5 (8.93)            23 (5.75)          23.1 (8.51)      23.8 (8.83)
+Levy               0.432 (0.474)        0.635 (0.546)        0.204 (0.297)        0.581 (0.543)    0.237 (0.231)
+  Griewank: VPSO vs PSO p_Holm=1.2e-10, IPSO p_Holm=1.2e-10, APSO p_Holm=9.3e-09, RandWPSO p_Holm=1.2e-10
+  Bohachevsky: VPSO vs PSO p_Holm=4.8e-12, IPSO p_Holm=4.8e-12, APSO p_Holm=1.9e-10, RandWPSO p_Holm=4.8e-12
+  Bukin: VPSO vs PSO p_Holm=1.5e-05, IPSO p_Holm=3.2e-04, APSO p_Holm=0.86, RandWPSO p_Holm=1.6e-06
+  Ackley: VPSO vs PSO p_Holm=0.95, IPSO p_Holm=6.5e-05, APSO p_Holm=0.87, RandWPSO p_Holm=0.95
+  Rastrigin: VPSO vs PSO p_Holm=1, IPSO p_Holm=0.0045, APSO p_Holm=1, RandWPSO p_Holm=1
+  Levy: VPSO vs PSO p_Holm=0.53, IPSO p_Holm=0.026, APSO p_Holm=0.53, RandWPSO p_Holm=0.081

@@ -1,0 +1,69 @@
+cff-version: 1.2.0
+message: "If you use this data or code, please cite the article below."
+title: "MO-VPSO: data and code"
+version: "1.0.0"
+date-released: "2026-10-19"
+license: ["MIT", "CC-BY-4.0"]
+authors:
+  - family-names: Abdiev
+    given-names: Bobur
+    email: b.abdiev@nsumt.uz
+    affiliation: "Navoi State University of Mining and Technologies"
+  - family-names: Khamidov
+    given-names: Boburjon
+    affiliation: "Navoi State University of Mining and Technologies"
+  - family-names: Yakhshiev
+    given-names: Sherali
+    affiliation: "Navoi State University of Mining and Technologies"
+  - family-names: Ravshanov
+    given-names: Jamshid
+    affiliation: "Navoi State University of Mining and Technologies"
+  - family-names: Isaev
+    given-names: Doniyor
+    affiliation: "Navoi State University of Mining and Technologies"
+  - family-names: Akhmedov
+    given-names: Xasan
+    affiliation: "Navoi State University of Mining and Technologies"
+  - family-names: Toirova
+    given-names: Nuriya
+    affiliation: "Navoi State University of Mining and Technologies"
+  - family-names: Ataullaev
+    given-names: Azizjon
+    affiliation: "Navoi State University of Mining and Technologies"
+  - family-names: Rakhmanova
+    given-names: Nigora
+    affiliation: "Navoi State University of Mining and Technologies"
+  - family-names: Bozorov
+    given-names: Ramziddin
+    affiliation: "Navoi State University of Mining and Technologies"
+  - family-names: Hamidov
+    given-names: Anvar
+    affiliation: "Navoi State University of Mining and Technologies"
+preferred-citation:
+  type: article
+  title: "MO-VPSO: A Multi-Objective Particle Swarm Optimizer with Back-Loaded Learning Factors for Collision-Free Mobile Robot Path Planning"
+  journal: "Scientific Reports"
+  year: 2026
+  authors:
+    - family-names: Abdiev
+      given-names: Bobur
+    - family-names: Khamidov
+      given-names: Boburjon
+    - family-names: Yakhshiev
+      given-names: Sherali
+    - family-names: Ravshanov
+      given-names: Jamshid
+    - family-names: Isaev
+      given-names: Doniyor
+    - family-names: Akhmedov
+      given-names: Xasan
+    - family-names: Toirova
+      given-names: Nuriya
+    - family-names: Ataullaev
+      given-names: Azizjon
+    - family-names: Rakhmanova
+      given-names: Nigora
+    - family-names: Bozorov
+      given-names: Ramziddin
+    - family-names: Hamidov
+      given-names: Anvar

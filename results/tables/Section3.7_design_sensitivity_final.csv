@@ -1,0 +1,10 @@
+config,feasibility_pct
+cp4,100.0
+cp6,84.0
+cp8,90.0
+cp10,70.0
+cp12,70.0
+depth500,100.0
+depth2000,100.0
+count500,90.0
+count2000,92.0
